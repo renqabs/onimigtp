@@ -52,7 +52,7 @@ ALLOWED_MODELS = [
     {"id": "gpt-4-turbo", "name": "gpt-4-turbo"},
     {"id": "o1-preview", "name": "o1-preview"},
     {"id": "o1-mini", "name": "o1-mini"},
-    {"id": "claude-3-5-sonnet", "name": "claude-3-5-sonnet"},
+    {"id": "claude_3.5_sonnet", "name": "claude_3.5_sonnet"},
     {"id": "claude_3_opus", "name": "claude_3_opus"},
     {"id": "deepseek-coder", "name": "deepseek-coder"},
     {"id": "llama-3-lumimaid-70b", "name": "llama-3-lumimaid-70b"},
