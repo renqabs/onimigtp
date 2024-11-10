@@ -221,7 +221,11 @@ async def chat_completions(
 
     thread_id = await create_conversation(APIKEY, AUTHORIZATION, request.model, USER_ID)
     # 使用 OpenAI API
-    default_system_prompt = 'You are a helpful assistant. \nAdditional Context:\n- Respond using KaTeX to render mathematical expressions in your responses. Only use KaTeX for actual mathematical equations and formulas. For all other text, use regular formatting. Use the following format: $<expression>$ for inline math and $$<expression>$$ for display math.\n\nExample:\nUser: How do you find the roots of a quadratic equation?\nAssistant: To find the roots of a quadratic equation given by $ax^2 + bx + c = 0$, you can use the quadratic formula:\n$$x = \frac{-b pm sqrt{b^2 - 4ac}}{2a}$$\n'
+    default_system_prompt = ''
+    for msg in request.messages:
+        if msg.role == 'system':
+            default_system_prompt = msg.content
+            request.messages.remove(msg)
     json_data = {
         'gptModel': request.model,
         'thread_id': thread_id,
