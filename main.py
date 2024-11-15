@@ -53,6 +53,7 @@ ALLOWED_MODELS = [
     {"id": "o1-preview", "name": "o1-preview"},
     {"id": "o1-mini", "name": "o1-mini"},
     {"id": "claude_3.5_sonnet", "name": "claude_3.5_sonnet"},
+    {"id": "claude_3.5_haiku", "name": "claude_3.5_haiku"},
     {"id": "claude_3_opus", "name": "claude_3_opus"},
     {"id": "deepseek-coder", "name": "deepseek-coder"},
     {"id": "llama-3-lumimaid-70b", "name": "llama-3-lumimaid-70b"},
